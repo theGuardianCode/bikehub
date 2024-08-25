@@ -12,21 +12,21 @@ const renderRacks = (list) => {
 
         markup += `
             <li>
-            <a href="${mapsURL}">
-                <span id="rack-item">
-                    <span id="pin">📍</span>
-                    <div>
-                        <h3>${element['address'].toUpperCase()}</h3>
-                        <div id="rack-info">
-                            <p>${element['rack_type'].toUpperCase()}</p>
-                            <p>CAPACITY: ${element['capacity']}</p>
-                            <p>LAT: ${element['latitude']}</p>
-                            <p>LONG: ${element['longitude']}</p>
+                <a href="${mapsURL}">
+                    <span id="rack-item">
+                        <span id="pin">📍</span>
+                        <div>
+                            <h3>${element['address'].toUpperCase()}</h3>
+                            <div id="rack-info">
+                                <p>${element['rack_type'].toUpperCase()}</p>
+                                <p>CAPACITY: ${element['capacity']}</p>
+                                <p>LAT: ${element['latitude']}</p>
+                                <p>LONG: ${element['longitude']}</p>
+                            </div>
                         </div>
-                    </div>
-                </span>
-            </a>
-        </li>
+                    </span>
+                </a>
+            </li>
         `
     });
     racklist.innerHTML = markup
@@ -73,8 +73,14 @@ window.onload = () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
             fetchRacks(position.coords.latitude, position.coords.longitude)
+        }, 
+        (err) => {
+            if (err.code == 1) {
+                fetchRacks(0, 0)
+            }
         })
     } else {
+        console.log("no location")
         fetchRacks(0, 0)
     }
 }
