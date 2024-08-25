@@ -75,6 +75,7 @@ window.onload = () => {
             fetchRacks(position.coords.latitude, position.coords.longitude)
         }, 
         (err) => {
+            console.log(err)
             if (err.code == 1) {
                 fetchRacks(0, 0)
             }
