@@ -22,3 +22,15 @@ h1 {
     border-radius: 40px;
     box-shadow: 5px 7px #210B2C;
 }
+
+.links {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+
+    img {
+        height: 50px;
+        width: auto;
+    }
+}

@@ -26,8 +26,3 @@ a {
     align-items: center;
     box-sizing: border-box;
 }
-
-#map {
-    height: 90vh;
-    width: 100vw;
-}
