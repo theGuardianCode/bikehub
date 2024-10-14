@@ -60,7 +60,7 @@ const fetchRacks = (lat, long) => {
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    racks.concat(data.results)
+                    racks = racks.concat(data.results)
                     racks = sortRacks(racks, lat, long)
                     renderRacks(racks)
                 })
