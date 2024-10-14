@@ -1,7 +1,4 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #D8B4E2;
     font-family: sans-serif;
     color: #55286F;
@@ -11,6 +8,18 @@ body {
 a {
     text-decoration: none;
     color: #55286F;
+}
+
+p {
+    font-size: 20px;
+}
+
+.content {
+    padding: 10px;
+
+    h2 {
+        margin: 0;
+    }
 }
 
 .navbar {

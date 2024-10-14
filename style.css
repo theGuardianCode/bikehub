@@ -24,9 +24,10 @@ h1 {
 }
 
 .links {
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 95%;
     justify-content: space-between;
 
     img {
