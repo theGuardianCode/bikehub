@@ -3,8 +3,6 @@ let rackOffset = 0
 let url = `https://data.brisbane.qld.gov.au/api/explore/v2.1/catalog/datasets/bicycle-racks/records?limit=${rackCount}&offset=${rackOffset}`
 const racklist = document.getElementById("rack-list")
 
-const mapsURL = "https://www.google.com/maps/search/?api=1&query=47.5951518%2C-122.3316393"
-
 const renderRacks = (list) => {
     markup = ""
     list.forEach(element => {
