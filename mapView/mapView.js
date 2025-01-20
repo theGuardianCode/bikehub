@@ -6,7 +6,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 function plotRacks(racks) {
     racks.forEach(element => {
-        const mapsURL = `https://www.google.com/maps/search/?api=1&query=${element.latitude}%2C${element.longitude}`
+        const mapsURL = `geo:${element.latitude},${element.longitude}?q=${element.latitude},${element.longitude}`
 
         let popupText = `
             Address: ${element.address}<br>
